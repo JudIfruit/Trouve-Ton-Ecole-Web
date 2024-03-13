@@ -3,7 +3,7 @@
 </script>
 
 <template>
- <div>Ecole</div>
+ <div>Ecoles</div>
 </template>
 
 <style scoped>
