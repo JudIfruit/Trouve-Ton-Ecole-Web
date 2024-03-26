@@ -1,13 +1,12 @@
 <template>
   <nav class="navbar">
     <div class="navbar-brand">
-      <RouterLink to="/">
         <img src="@/assets/logo.png" alt="SupInnovEducation Logo" class="logo"/>
-      </RouterLink>
     </div>
     <div class="navbar-links">
-      <RouterLink to="/ecole">École</RouterLink>
-      <RouterLink to="/membre">Membre</RouterLink>
+      <RouterLink to="/">Acceuil</RouterLink>
+      <RouterLink to="/ecole">Écoles</RouterLink>
+      <RouterLink to="/membre">Membres</RouterLink>
       <RouterLink to="/documentation">Documentation</RouterLink>
       <RouterLink to="/dashboard">Dashboard</RouterLink>
     </div>
@@ -54,12 +53,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  :root {
-  --green: #00E77F;
-  --white: #fff;
-  --light-white: #aaa;
-  --light-gh: #4b4b4b;
-}
   
   *{
     font-family: 'Rubik', sans-serif;
@@ -69,31 +62,39 @@ export default {
     text-decoration: none;
     text-transform: capitalize;
   }
-  
-  *::selection{
-    background-color: var(--green);
-    color: #3d3d3d;
-  }
-  
+
   .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #343a40;
-  padding: 1px 30px 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #343a40;
+    padding: 15px 30px 15px 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
 
+
+
   .navbar-brand .logo {
-  height: 50px; 
+  height: 50px;
   }
 
   .navbar a {
+    align-items: center;
     text-decoration: none;
     color: #fff;
+    margin-inline: 15px;
     padding: 10px 25px;
+    font-weight: 600;
+
   }
 
   .navbar-links a:hover{
+    background-color: #00E77F;
+    color: #ffff;
+    border-radius: 15px;
+  }
+
+  .router-link-active{
     background-color: #00E77F;
     color: #fff;
     border-radius: 15px;;
@@ -104,7 +105,7 @@ export default {
     align-items: center;
   }
 
-  .navbar-login a:hover {
+  .navbar-login  {
     background-color: #00E77F;
     color: #fff;
     border-radius: 5px;

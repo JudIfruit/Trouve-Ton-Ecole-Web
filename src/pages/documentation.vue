@@ -1,9 +1,13 @@
 <script setup>
-
+  import sidebar from "@/components/sidebar.vue";
 </script>
 
 <template>
- <div>Documentation</div>
+  <div class="home">
+    <sidebar />
+  </div>
+
+  <div>Documentation</div>
 </template>
 
 <style scoped>
